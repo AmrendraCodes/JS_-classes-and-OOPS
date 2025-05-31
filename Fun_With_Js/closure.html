@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+function outer() {
+  let outerVar = "I'm from outer";
+
+  function inner() {
+    console.log(outerVar); // Can access outerVar
+  }
+
+  inner();
+}
+outer();
+</script>
+<script>
+    function outer() {
+  function inner() {
+    let innerVar = "I'm from inner";
+  }
+
+  inner();
+  console.log(innerVar); 
+}
+
+outer();
+</script>
+</html>
